@@ -1,18 +1,19 @@
 # cassandra_NoSQL_data_modeling
 
 ### Table of Contents
+
 - Introduction - purpose of project, What is Sparkify, how this project is going to help them.
 - Database schema design and ETL process
 - Files in repository
 - How to run the python scripts
 
-### Introduction: Sparkify and user data.
+### Introduction: Sparkify and user data
 
 Sparkify is a (fictional) startup that offers music streaming services. They accumulate 
 data but do not yet leverage them. The data is stored in a csv table. I have created a
 NoSQL data model which is explained below.
 
-Cassandra is a NoSQL database. You can read on the [cassandra website](): _"The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance."_
+Cassandra is a NoSQL database. You can read on the [cassandra website](https://cassandra.apache.org/): _"The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance."_
 
 The data model in this repository enables Sparkify to perform three analyses.
 One analysis enables Sparkify to examine every listening session and see which
@@ -67,7 +68,7 @@ To run the notebooks, you need to have a local installation of Cassandra as well
 
 I recommend using [Docker Desktop](https://www.docker.com/products/docker-desktop) to create an instance of Cassandra:
 
-`docker run --name cassandra -p 127.0.0.1:9042:9042 -p 127.0.0.1:9160:9160 -d cassandra`
+`docker run --name cassandra -p 127.0.0.1:9160:9160 -d cassandra`
 
 The packages you need to run the notebooks are:
 
@@ -80,3 +81,5 @@ The packages you need to run the notebooks are:
 or
 
 `conda install jupyterlab pandas cassandra`
+
+Once you have all required packages installed, go with your terminal to the root directory of the project and type `jupyterlab`. You can then open the notebook in your browser by visiting localhost:8888 (depending on your settings of jupyter lab). 
